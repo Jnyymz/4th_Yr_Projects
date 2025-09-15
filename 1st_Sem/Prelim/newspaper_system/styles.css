@@ -1,0 +1,113 @@
+/* General */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #EEEEEE;
+  color: #333;
+}
+
+:root {
+  --primary-dark: #355E3B;
+  --accent: #C6D870;   /* Yellow accent from your palette */
+  --secondary: #06D6A0; /* Green-teal accent */
+  --text-dark: #333;
+}
+
+/* Remove gap between navbar and banner */
+.navbar {
+  margin-bottom: 0;
+}
+
+/* Banner full width, no white gap */
+.banner {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* Add spacing below the banner before header */
+.header {
+  margin-top: 1.5rem; /* space between banner & Welcome heading */
+}
+
+
+header img {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+}
+
+
+.header h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+
+.role-card {
+  border: none;
+  border-radius: 20px;
+  background: #FAF7F3;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  padding: 2rem 1.5rem;   /* more padding = bigger cards */
+  min-height: 380px;      /* ensures a taller card */
+}
+
+.role-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+.role-banner-img {
+  width: 100%;
+  max-height: 200px;   /* keeps it under control */
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+
+
+/* Articles */
+.article-card {
+  border: none;
+  border-radius: 12px;
+  background: #FAF7F3;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.article-card .card-title {
+  color: var(--primary-dark);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.article-card .card-text {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+/* Article Tags (Admin messages, etc.) */
+.article-badge {
+  background-color: var(--secondary);
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 8px;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+
