@@ -40,6 +40,7 @@ CREATE TABLE attendance (
     date DATE,
     time_in TIME,
     status ENUM('Present','Absent') DEFAULT 'Present',
+    excuse_status ENUM('Pending','Accepted','Rejected') DEFAULT NULL, 
     is_late BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (student_course_id) REFERENCES student_courses(id) ON DELETE CASCADE
 );
