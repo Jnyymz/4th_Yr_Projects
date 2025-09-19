@@ -16,6 +16,7 @@ CREATE TABLE articles (
     author_id INT NOT NULL,
     is_active TINYINT(1) NOT NULL DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    image_path VARCHAR(255) DEFAULT NULL,
     FOREIGN KEY (author_id) REFERENCES school_publication_users(user_id) ON DELETE CASCADE
 );
 
@@ -41,4 +42,11 @@ CREATE TABLE deleted_articles (
     deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES school_publication_users(user_id) ON DELETE CASCADE
 );
+
+CREATE TABLE article_categories (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 
