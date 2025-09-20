@@ -1,0 +1,503 @@
+/* Color palette */
+:root {
+  --primary-dark: #355E3B;
+  --accent: #C6D870;
+  --secondary: #06D6A0;
+  --text-dark: #333;
+}
+
+/* General body for login page */
+#login-body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login container */
+#login-container {
+  width: 100%;
+  max-width: 500px; /* bigger form */
+  padding: 20px;
+}
+
+
+/* Form */
+.login-form .form-control {
+  font-size: 1.1rem; /* bigger inputs */
+  padding: 14px;
+  height: auto;
+}
+
+.login-form label {
+  font-size: 1rem;
+}
+
+/* Button */
+#login-btn {
+  background: var(--primary-dark);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px; /* space below button */
+}
+
+#login-btn:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+/* Footer links */
+.login-footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-footer a {
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+.login-footer a:hover {
+  color: var(--secondary);
+}
+
+
+/* Card */
+.login-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  padding: 40px; /* 💡 more padding inside */
+  text-align: center; /* 💡 center header + subtitle */
+}
+
+/* Title */
+.login-card h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+}
+
+.login-card p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Form */
+.login-form .form-group {
+  margin-bottom: 20px;
+  text-align: left; /* label left aligned */
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.login-form .form-control {
+  width: 100%;
+  font-size: 1.05rem;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form .form-control:focus {
+  outline: none;
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 6px rgba(53, 94, 59, 0.3);
+}
+
+/* Button */
+#login-btn {
+  background: var(--primary-dark);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%; /* 💡 full-width button */
+}
+
+#login-btn:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+/* Footer links */
+.login-footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-footer a {
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+.login-footer a:hover {
+  color: var(--secondary);
+}
+
+
+
+
+/*REGISTER STYLES*/
+
+/* Background */
+#register-body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+}
+
+/* Container */
+#register-container {
+  width: 100%;
+  max-width: 550px;
+  padding: 20px;
+}
+
+/* Card */
+.register-card {
+  background: rgba(255, 255, 255, 0.75); /* transparent effect */
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px); /* glassmorphism */
+  padding: 40px;
+  text-align: center;
+}
+
+.register-card h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.register-card p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+/* Form */
+.register-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.register-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.register-form .form-control {
+  font-size: 1.05rem;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.register-form .form-control:focus {
+  outline: none;
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 6px rgba(53, 94, 59, 0.3);
+}
+
+/* Button */
+#register-btn {
+  background: var(--primary-dark);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#register-btn:hover {
+  background: var(--secondary);
+}
+
+/* Footer */
+.register-footer {
+  text-align: center;
+}
+
+.register-footer a {
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.register-footer a:hover {
+  color: var(--secondary);
+}
+
+/*NAVBAR*/
+
+.navbar {
+  background-color: var(--primary-dark) !important;
+  padding-top: 0.3rem !important;
+  padding-bottom: 0.3rem !important;
+  min-height: 45px !important; /* enforce shorter height */
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 1.3rem !important; /* slightly smaller font */
+  line-height: 1.5 !important;
+  color: #fff !important;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  font-size: 0.95rem !important;
+}
+
+/* Toggler button */
+.navbar-toggler {
+  padding: 0.25rem 0.5rem !important;
+}
+
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* Active link */
+.navbar-nav .nav-item.active .nav-link {
+  color: var(--secondary) !important;
+  font-weight: bold;
+}
+
+/* Notification badge */
+.navbar-nav .nav-link .notification {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+
+/*ARTICLES*/
+/* General body */
+#article-body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome section styling */
+.welcome-section {
+    padding: 2rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem; /* Reduced from 2rem to 1rem */
+}
+
+
+.welcome-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.welcome-subtitle {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+
+/* Two-column layout wrapper */
+.article-layout {
+    display: flex;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding: 1rem 0; /* Reduced from 2rem */
+}
+
+
+/* Left column: form */
+.article-form {
+    flex: 0 0 30%;
+    max-width: 30%;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+/* Articles column */
+.articles-column {
+    flex: 0 0 65%;
+    max-width: 65%;
+}
+
+/* Form styling */
+.article-form .form-control,
+.article-form textarea,
+.article-form .form-control-file {
+    border-radius: 0.3rem;
+    border: 1px solid var(--primary-dark);
+}
+
+.article-form .btn-primary {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transition: all 0.3s ease;
+}
+
+.article-form .btn-primary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--text-dark);
+}
+
+/* Articles grid: 2 columns */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+
+/* Individual article card */
+.article-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.article-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.article-card h5 {
+    font-size: 1.25rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.article-card p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+
+
+
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 992px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+
+
+/* Accessed Articles Part */
+.articles-grid-4 .card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .articles-grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .articles-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .articles-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
