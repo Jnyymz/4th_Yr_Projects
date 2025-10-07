@@ -51,10 +51,10 @@ let hasLowGrade = students.some(function(student) {
 });
 console.log("Any student with grade below 80?", hasLowGrade ? "Yes" : "No");
 
-// I. Use every() method to check if all students are 17 or older
+// I. Use every() method to check if all students are 15 or younger
 console.log("\n---- Using every() ----");
 let allOldEnough = students.every(function(student) {
-  return student.age >= 17;
+  return student.age <= 15;
 });
-console.log("All students are 17 or older?", allOldEnough ? "Yes" : "No");
+console.log("All students are 15 or younger?", allOldEnough ? "Yes" : "No");
 
