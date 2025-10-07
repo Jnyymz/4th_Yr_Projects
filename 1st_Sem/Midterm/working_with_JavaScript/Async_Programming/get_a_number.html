@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promises Number Practice</title>
+</head>
+<body>
+  <h2>Enter a number:</h2>
+  <input type="text" id="numInput" placeholder="Enter a number">
+  <button onclick="runG()">Run</button>
+  <p id="result"></p>
+
+  <script>
+    // G. Reject if not integer, resolve with squared value
+    function runG() {
+      let num = document.getElementById("numInput").value;
+      let result = document.getElementById("result");
+
+      let promise = new Promise(function(resolve, reject) {
+        if (isNaN(num) || !Number.isInteger(Number(num))) {
+          reject("Please enter a valid integer!");
+        } else {
+          resolve(num * num);
+        }
+      });
+
+      promise
+        .then(function(squared) {
+          result.textContent = num + " is " + squared + " when doubled";
+        })
+        .catch(function(error) {
+          result.textContent = error;
+        });
+    }
+
+    // H. Reject if not integer, resolve after 5 seconds with cubed value
+    function runH() {
+      let num = document.getElementById("numInput").value;
+      let result = document.getElementById("result");
+
+      let promise = new Promise(function(resolve, reject) {
+        if (isNaN(num) || !Number.isInteger(Number(num))) {
+          reject("Please enter a valid integer!");
+        } else {
+          setTimeout(function() {
+            resolve(num * num * num);
+          }, 5000);
+        }
+      });
+
+      promise
+        .then(function(cubed) {
+          result.textContent = num + " is " + cubed + " when cubed";
+        })
+        .catch(function(error) {
+          result.textContent = error;
+        });
+    }
+
+    // I. Reject if not between 1 and 10, allow only 3 tries
+    let failCount = 0;
+
+    function runI() {
+      let num = document.getElementById("numInput").value;
+      let result = document.getElementById("result");
+
+      let promise = new Promise(function(resolve, reject) {
+        if (failCount >= 3) {
+          reject("You already failed three times, so no chances anymore");
+        } else if (isNaN(num) || num < 1 || num > 10) {
+          failCount++;
+          reject("Number must be between 1 and 10! Attempt " + failCount);
+        } else {
+          resolve(num);
+        }
+      });
+
+      promise
+        .then(function(validNum) {
+          result.textContent = "Yes " + validNum + " is between 1 and 10";
+        })
+        .catch(function(error) {
+          result.textContent = error;
+        });
+    }
+  </script>
+</body>
+</html>
