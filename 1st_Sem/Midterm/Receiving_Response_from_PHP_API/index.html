@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Classic Pinoy Snacks — Order Form</title>
+  <style>
+    :root {--bg: #f7f7fb;--card: #fff;--accent: #4b164c;--muted: #666;}
+body {font-family: Inter, system-ui, Arial, sans-serif;background: var(--bg);color: #222;margin: 0;padding: 24px;}
+h1 {color: var(--accent);margin-bottom: 8px;}
+.grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));gap: 18px;}
+.card {background: var(--card);border-radius: 12px;padding: 16px;box-shadow: 0 6px 18px rgba(75, 22, 76, 0.08);}
+.snack-img {width: 100%;height: 180px;border-radius: 8px;background-size: cover;background-position: center;background-repeat: no-repeat;}
+.snack-info {padding: 12px;text-align: center;}
+.snack-info h3 {font-size: 1.2rem;color: var(--accent);margin-bottom: 4px;}
+.snack-info .desc {font-size: 0.95rem;color: #555;margin-bottom: 6px;}
+.price {font-weight: 700;color: var(--accent);}
+label {display: block;font-size: 13px;margin-top: 10px;color: var(--muted);}
+input[type=number] {width: 100%;padding: 8px;border-radius: 8px;border: 1px solid #e6e6e6;margin-top: 6px;}
+button {margin-top: 12px;background: var(--accent);color: white;border: 0;padding: 10px 12px;border-radius: 8px;cursor: pointer;}
+.result {margin-top: 10px;padding: 10px;border-radius: 8px;background: #f5f5f5;}
+.error {color: #a70000;}
+small.note {display: block;margin-top: 8px;color: #444;}
+  </style>
+</head>
+<body>
+  <h1>Classic Pinoy Snacks — Order</h1>
+  <p>Relive your childhood favorites — just pick a snack, pay, and enjoy the taste of the good old days!</p>
+
+  <div class="grid">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="snack-img" style="background-image: url('https://img.lazcdn.com/g/ff/kf/S71028e07e4a242aea8fb3dbb5fc959aeq.jpg_960x960q80.jpg_.webp');"></div>
+      <div class="snack-info">
+        <h3>Langka Ube</h3>
+        <p class="desc">Jack fruit and Purple yam combo</p>
+      </div>
+      <p class="price">Price: ₱25.00 each</p>
+
+      <form class="order-form" data-snack="Langka Ube" data-price="25.00">
+        <label>Cash (₱)</label>
+        <input name="cash" type="number" step="0.01" min="0" placeholder="Enter cash provided" required />
+
+        <label>Quantity</label>
+        <input name="quantity" type="number" min="1" step="1" placeholder="Enter quantity" required />
+
+        <button type="submit">Buy</button>
+        <div class="result" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="snack-img" style="background-image: url('https://www.royplazastore.com/media/199470.jpg');"></div>
+      <div class="snack-info">
+        <h3>Yari Ka!</h3>
+        <p class="desc">Cornchips - Chicken Flavor</p>
+      </div>
+      <p class="price">Price: ₱18.00 each</p>
+
+      <form class="order-form" data-snack="Yari Ka" data-price="18.00">
+        <label>Cash (₱)</label>
+        <input name="cash" type="number" step="0.01" min="0" placeholder="Enter cash provided" required />
+
+        <label>Quantity</label>
+        <input name="quantity" type="number" min="1" step="1" placeholder="Enter quantity" required />
+
+        <button type="submit">Buy</button>
+        <div class="result" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="snack-img" style="background-image: url('https://scontent.fmnl30-1.fna.fbcdn.net/v/t39.30808-6/467668485_10161616964694070_349252171771596220_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=IPXLHUYnRZ8Q7kNvwF1l30N&_nc_oc=AdnsRl6tW6KQrx4ttxM-NL5g6dwwESeHcELmwoKgE9icX04AxF5G28W5sfSV_GDJxWo&_nc_zt=23&_nc_ht=scontent.fmnl30-1.fna&_nc_gid=6mq3C9vecxmjVLNit3jY6Q&oh=00_Afeuw4OKjttulj6KzItmi3KVRXOjSSsOammHQZPG5m2cjQ&oe=68F3BED4');"></div>
+      <div class="snack-info">
+        <h3>Sunshine</h3>
+        <p class="desc">Crunchy Green Peas</p>
+      </div>
+      <p class="price">Price: ₱15.00 each</p>
+
+      <form class="order-form" data-snack="Sunshine" data-price="15.00">
+        <label>Cash (₱)</label>
+        <input name="cash" type="number" step="0.01" min="0" placeholder="Enter cash provided" required />
+
+        <label>Quantity</label>
+        <input name="quantity" type="number" min="1" step="1" placeholder="Enter quantity" required />
+
+        <button type="submit">Buy</button>
+        <div class="result" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.order-form').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const resultDiv = form.querySelector('.result');
+        resultDiv.textContent = 'Processing...';
+
+        const price = parseFloat(form.dataset.price);
+        const snack = form.dataset.snack;
+        const cashVal = form.elements['cash'].value;
+        const quantityVal = form.elements['quantity'].value;
+
+        if (cashVal === '' || quantityVal === '') {
+          resultDiv.innerHTML = '<span class="error">Please fill both fields.</span>';
+          return;
+        }
+
+        const payload = { snack, price, cash: cashVal, quantity: quantityVal };
+
+        try {
+          const resp = await fetch('api.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          const data = await resp.json();
+
+          // Display formatted response
+          if (data.success) {
+            const total = (Number(quantityVal) * Number(price)).toFixed(2);
+
+            resultDiv.innerHTML = `
+              <strong>Success!</strong> ${data.message}
+              <br><br>
+              <strong>Total:</strong> ₱${total}
+              <br>
+              <strong>Change:</strong> ₱${Number(data.change).toFixed(2)}
+            `;
+          } else {
+            resultDiv.innerHTML = `<span class="error">Error: ${data.message}</span>`;
+          }
+        } catch (err) {
+          resultDiv.innerHTML = `<span class="error">Network or server error: ${err.message}</span>`;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
