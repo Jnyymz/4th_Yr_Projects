@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>My Portfolio</title>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" 
+    rel="stylesheet"
+  >
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet"
+  >
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url("https://i.pinimg.com/736x/e1/89/8d/e1898d3c2d18042aad07e8e7f154ac9c.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .glass-box {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .custom-btn {
+      border: 1px solid #fff;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .custom-btn:hover {
+      background-color: #fff;
+      color: #111;
+    }
+
+    .icon-link {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .icon-link:hover {
+      color: #e5e7eb;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    /* Apply animation to the glass container */
+    .glass-box {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    /* NEW: animation */
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0; /* start hidden, animation will fade it in */
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+<div id="page-overlay">
+
+    <div class="container-fluid px-4 px-md-5 py-5">
+
+    <!-- GLASS CONTAINER -->
+    <div class="glass-box max-w-6xl mx-auto text-white">
+
+        <!-- NAV -->
+        <nav class="d-flex justify-content-between align-items-center mb-5">
+        <h4 class="fw-semibold">My Portfolio</h4>
+        <div class="d-flex gap-4">
+            <a href="mailto:your@email.com" class="icon-link">
+            <i class="bi bi-envelope"></i>
+            </a>
+            <a href="https://github.com/Jnyymz" target="_blank" class="icon-link">
+            <i class="bi bi-github"></i>
+            </a>
+        </div>
+        </nav>
+
+        <!-- HERO -->
+        <div class="row align-items-center g-5 mb-5">
+
+        <!-- IMAGE -->
+        <div class="col-lg-5 text-center">
+            <img 
+            src="img/pic.jpg" 
+            alt="Profile"
+            class="img-fluid rounded-3 shadow-lg"
+            style="max-height: 450px; object-fit: cover;"
+            >
+        </div>
+
+        <!-- ABOUT -->
+        <div class="col-lg-7">
+            <h1 class="fw-bold mb-3 display-5">Hi! I'm Janimah</h1>
+            <h5 class="fw-light mb-4">Computer Science Student</h5>
+
+            <p class="opacity-90 leading-relaxed">
+            I am a Computer Science student with a strong interest in web development, 
+            software engineering, and system design. I enjoy creating clean, functional, 
+            and user-focused applications while continuously improving my technical skills.
+            </p>
+
+            <p class="opacity-90 leading-relaxed mt-3">
+            My goal is to apply my knowledge in real-world projects, collaborate with other 
+            developers, and grow into a well-rounded IT professional with a solid foundation 
+            in both theory and practice.
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="mt-4 d-flex flex-wrap gap-3">
+            <a href="skill.html" class="btn custom-btn px-4 rounded-pill">
+                Skills
+            </a>
+            <a href="projects.html" class="btn custom-btn px-4 rounded-pill">
+                Projects
+            </a>
+            <a href="education.html" class="btn custom-btn px-4 rounded-pill">
+                Education
+            </a>
+            </div>
+        </div>
+        </div>
+
+        <!-- INFO ROW -->
+        <div class="row text-center g-4">
+
+        <div class="col-md-4">
+            <div class="p-4">
+            <h6 class="fw-semibold mb-2">Design</h6>
+            <p class="opacity-80">
+                Focused on clean layouts, readability, and user experience.
+            </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4">
+            <h6 class="fw-semibold mb-2">Development</h6>
+            <p class="opacity-80">
+                Interested in full-stack development and modern web technologies.
+            </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4">
+            <h6 class="fw-semibold mb-2">Growth</h6>
+            <p class="opacity-80">
+                Continuously learning new tools, frameworks, and best practices.
+            </p>
+            </div>
+        </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="text-center mt-5 opacity-75">
+        © 2025 Janimah Abdul
+        </div>
+
+    </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
